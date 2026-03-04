@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prachi — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="cursor">
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">RC</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#connect">Connect</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="navMobile">
+  <button class="nav-mobile-close" id="navClose">✕</button>
+  <a href="#about" class="nav-mob-link">About</a>
+  <a href="#education" class="nav-mob-link">Education</a>
+  <a href="#experience" class="nav-mob-link">Experience</a>
+  <a href="#achievements" class="nav-mob-link">Achievements</a>
+  <a href="#skills" class="nav-mob-link">Skills</a>
+  <a href="#projects" class="nav-mob-link">Projects</a>
+  <a href="#connect" class="nav-mob-link">Connect</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    
+    <div class="hero-badge"><span></span>Open to opportunities</div>
+    <h1 class="hero-name">
+      <span class="line1">Hi, I'm</span>
+      <span class="line2 glitch" id="heroName">Prachi</span>
+    </h1>
+    <p class="hero-tagline">
+      <em>Data Science · Machine Learning · Computer Vision</em><br>
+      ECE Student at <em>Thapar Institute of Engineering and Technology</em>
+    </p>
+    <div class="hero-cta">
+      <a href="Prachi.pdf" class="btn-primary" download><i class="fas fa-download"></i> Download Resume</a>
+      <a href="#projects" class="btn-secondary"><i class="fas fa-code"></i> View Projects</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num"><span class="counter" data-target="600">0</span>+</div>
+        <div class="stat-label">Problems Solved</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">Top <span class="counter" data-target="35">0</span>K</div>
+        <div class="stat-label">LeetCode Global</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-frame">
+          <!-- Placeholder portrait -->
+          <img src="img1.jpeg" alt="Prachi">
+        </div>
+        <div class="about-photo-glow"></div>
+      </div>
+
+      <div class="about-text reveal">
+        <div class="section-label">Who I Am</div>
+        <h2 class="section-title">Building Intelligent<br>Systems that Matter</h2>
+        <div class="divider"></div>
+
+        <p>I'm <strong>Prachi</strong>, a passionate Electronics and Communication student at 
+        <strong>Thapar Institute of Engineering and Technology</strong>, India, with a strong 
+        foundation in Data Structures and Algorithms and a deep interest in Data Science 
+        and Machine Learning.</p>
+
+        <p>I've solved over <strong>600+ problems</strong> on platforms like LeetCode, sharpening 
+        my problem-solving, analytical thinking, and coding abilities. My work spans data 
+        preprocessing, feature engineering, model training, and evaluation — with exposure 
+        to NLP and recommendation algorithms.</p>
+
+        <p>Beyond ML, I develop clean, responsive UIs using HTML, CSS, JavaScript, and 
+        Tailwind CSS — enabling me to build and deploy data-driven products end-to-end.</p>
+
+        <div class="about-highlights">
+          <span class="highlight-chip">📍 Patiala, India</span>
+          <span class="highlight-chip">🎓 BE Electronics and Communication Engineering</span>
+          <span class="highlight-chip">🤖 AI / ML Enthusiast</span>
+          <span class="highlight-chip">💻 600+ LeetCode Problems</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">Academic Journey</div>
+      <h2 class="section-title">Education</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Building a strong foundation in Computer Engineering with a passion for pushing boundaries.</p>
+    </div>
+    <div class="edu-cards">
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-school">Thapar Institute of Engineering and Technology</div>
+        <div class="edu-degree">Bachelor of Engineering in Electronics and Communication Engineering</div>
+        <div class="edu-location">📍 Patiala, Punjab, India</div>
+        <div class="edu-year">August 2023 — May 2027 (Expected)</div>
+        <div class="edu-grade">8.31 / 10.0 <span>CGPA</span></div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.1s">
+        <div class="edu-icon">🏫</div>
+        <div class="edu-school">Rose Mary Convent School</div>
+        <div class="edu-degree">High School — CBSE Board</div>
+        <div class="edu-location">📍 Bathinda, Punjab, India</div>
+        <div class="edu-year">August 2021 — May 2023</div>
+        <div class="edu-grade">86.8% <span>Percentage</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">Work Experience</div>
+      <h2 class="section-title">Where I've Worked</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Hands-on industry experience building real-world AI/ML systems.</p>
+    </div>
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company">OutriX</div>
+          <div class="exp-role">AI / ML Intern · Remote</div>
+        </div>
+        <div class="exp-date">Jul 2025 — Aug 2025</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Designed, implemented, and trained a custom Convolutional Neural Network (CNN) architecture using PyTorch to classify images into 10 distinct categories, achieving high model accuracy on the CIFAR-10 dataset.</li>
+        <li>Created custom dataset classes and upgraded data loaders to efficiently process the CIFAR-10 dataset, improving pipeline robustness and throughput.</li>
+        <li>Delivered weekly updates and a final comprehensive report covering methodology, results, model performance analysis, and future scope for both projects.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card reveal" style="transition-delay:0.1s">
+    <div class="exp-header">
+      <div>
+        <div class="exp-company">McKinsey & Company</div>
+        <div class="exp-role">McKinsey Forward Learner · Remote</div>
+      </div>
+      <div class="exp-date">Oct 2025 — Dec 2025</div>
+    </div>
+
+    <ul class="exp-bullets">
+      <li>Completed the <strong>McKinsey Forward Program</strong>, focusing on structured problem solving, business communication, and leadership development.</li>
+      <li>Applied McKinsey’s hypothesis-driven approach to real-world case scenarios and analytical decision making.</li>
+      <li>Developed professional skills in collaboration, adaptability, and data-driven thinking aligned with consulting practices.</li>
+    </ul>
+
+    <!-- Certificate Preview -->
+  </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-wrap">
+
+    <div class="reveal">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Achievements</h2>
+      <div class="divider"></div>
+      <p class="section-sub">
+        Milestones and recognitions earned through hard work and consistency.
+      </p>
+    </div>
+
+
+
+      <!-- McKinsey -->
+      <div class="achieve-card reveal" style="transition-delay:0.1s">
+        <div class="achieve-icon">💼</div>
+        <div class="achieve-title">McKinsey Forward Program</div>
+
+        <div class="achieve-desc">
+          Selected for the prestigious <strong>McKinsey Forward Program</strong>,
+          focused on problem-solving and leadership skills.
+        </div>
+
+        <a href="McKinsey.jpeg"
+           target="_blank"
+           class="cert-btn">
+           View Certificate
+        </a>
+      </div>
+
+
+      <!-- LeetCode -->
+      <div class="achieve-card reveal" style="transition-delay:0.15s">
+        <div class="achieve-icon">⌨️</div>
+        <div class="achieve-title">
+          Top LeetCode Performer — 600+ Problems
+        </div>
+
+        <div class="achieve-desc">
+          Ranked among the <strong>top 1,20,000</strong> out of
+          <strong>5M+ users</strong>. 200-day streak holder.
+        </div>
+
+        <a href="https://leetcode.com/Prachi_1416/"
+           target="_blank"
+           class="cert-btn">
+           View Profile
+        </a>
+      </div>
+
+
+      <!-- AlgoUniversity -->
+      <div class="achieve-card reveal" style="transition-delay:0.2s">
+        <div class="achieve-icon">🥇</div>
+        <div class="achieve-title">
+          AlgoUniversity Technology Fellow
+        </div>
+
+        <div class="achieve-desc">
+          Selected among the <strong>Top 840 students</strong> nationwide
+          for the AlgoUniversity Technology Fellowship.
+        </div>
+
+        <a href="Algo.jpg"
+           target="_blank"
+           class="cert-btn">
+           View Certificate
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">Technical Arsenal</div>
+      <h2 class="section-title">My Skills</h2>
+      <div class="divider"></div>
+      <p class="section-sub">A broad and deep skill set spanning programming, ML, data science, and web development.</p>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap reveal">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item">Python</span>
+        <span class="marquee-item">C++</span>
+        <span class="marquee-item">JavaScript</span>
+        <span class="marquee-item">Machine Learning</span>
+        <span class="marquee-item">Deep Learning</span>
+        <span class="marquee-item">Computer Vision</span>
+        <span class="marquee-item">Data Science</span>
+        <span class="marquee-item">NLP</span>
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-item">TensorFlow</span>
+        <span class="marquee-item">Scikit-learn</span>
+        <span class="marquee-item">OpenCV</span>
+        <span class="marquee-item">Pandas</span>
+        <span class="marquee-item">DSA</span>
+        <span class="marquee-item">Flask</span>
+        <span class="marquee-item">Git & GitHub</span>
+        <!-- duplicate for infinite scroll -->
+        <span class="marquee-item">Python</span>
+        <span class="marquee-item">C++</span>
+        <span class="marquee-item">JavaScript</span>
+        <span class="marquee-item">Machine Learning</span>
+        <span class="marquee-item">Deep Learning</span>
+        <span class="marquee-item">Computer Vision</span>
+        <span class="marquee-item">Data Science</span>
+        <span class="marquee-item">NLP</span>
+        <span class="marquee-item">SQL</span>
+        <span class="marquee-item">TensorFlow</span>
+        <span class="marquee-item">Scikit-learn</span>
+        <span class="marquee-item">OpenCV</span>
+        <span class="marquee-item">Pandas</span>
+        <span class="marquee-item">DSA</span>
+        <span class="marquee-item">Flask</span>
+        <span class="marquee-item">Git & GitHub</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-section-title">Languages & Databases</div>
+      <div class="skills-grid">
+        <span class="skill-tag"><span class="dot"></span>Python</span>
+        <span class="skill-tag"><span class="dot"></span>C / C++</span>
+        <span class="skill-tag"><span class="dot"></span>JavaScript</span>
+        <span class="skill-tag"><span class="dot"></span>HTML</span>
+        <span class="skill-tag"><span class="dot"></span>CSS</span>
+        <span class="skill-tag"><span class="dot"></span>SQL</span>
+        <span class="skill-tag"><span class="dot"></span>SQLite3</span>
+        <span class="skill-tag"><span class="dot"></span>LaTeX</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-section-title">Machine Learning & AI</div>
+      <div class="skills-grid">
+        <span class="skill-tag"><span class="dot"></span>Data Cleaning & EDA</span>
+        <span class="skill-tag"><span class="dot"></span>Feature Engineering</span>
+        <span class="skill-tag"><span class="dot"></span>Data Visualization</span>
+        <span class="skill-tag"><span class="dot"></span>Statistical Analysis</span>
+        <span class="skill-tag"><span class="dot"></span>Regression & Classification</span>
+        <span class="skill-tag"><span class="dot"></span>Clustering</span>
+        <span class="skill-tag"><span class="dot"></span>Deep Learning (ANN, CNN)</span>
+        <span class="skill-tag"><span class="dot"></span>Computer Vision (OpenCV)</span>
+        <span class="skill-tag"><span class="dot"></span>Natural Language Processing</span>
+        <span class="skill-tag"><span class="dot"></span>Model Evaluation & Tuning</span>
+        <span class="skill-tag"><span class="dot"></span>Reinforcement Learning</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-section-title">Frameworks & Libraries</div>
+      <div class="skills-grid">
+        <span class="skill-tag"><span class="dot"></span>Scikit-learn</span>
+        <span class="skill-tag"><span class="dot"></span>TensorFlow</span>
+        <span class="skill-tag"><span class="dot"></span>Keras</span>
+        <span class="skill-tag"><span class="dot"></span>Pandas</span>
+        <span class="skill-tag"><span class="dot"></span>NumPy</span>
+        <span class="skill-tag"><span class="dot"></span>Matplotlib</span>
+        <span class="skill-tag"><span class="dot"></span>Seaborn</span>
+        <span class="skill-tag"><span class="dot"></span>OpenCV</span>
+        <span class="skill-tag"><span class="dot"></span>NetworkX</span>
+        <span class="skill-tag"><span class="dot"></span>Flask</span>
+        <span class="skill-tag"><span class="dot"></span>Streamlit</span>
+        <span class="skill-tag"><span class="dot"></span>Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="skills-section reveal">
+      <div class="skills-section-title">CS Fundamentals</div>
+      <div class="skills-grid">
+        <span class="skill-tag"><span class="dot"></span>Data Structures & Algorithms</span>
+        <span class="skill-tag"><span class="dot"></span>Object-Oriented Programming</span>
+        <span class="skill-tag"><span class="dot"></span>Database Management Systems</span>
+        <span class="skill-tag"><span class="dot"></span>Operating Systems</span>
+        <span class="skill-tag"><span class="dot"></span>Artificial Intelligence</span>
+        <span class="skill-tag"><span class="dot"></span>Git & GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">What I've Built</div>
+      <h2 class="section-title">My Projects</h2>
+      <div class="divider"></div>
+      <p class="section-sub">End-to-end projects that solve real problems using modern ML techniques.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-num">01</div>
+        <div class="project-title">Energy Consumption Forecasting</div>
+        <div class="project-desc">End-to-end ML pipeline on the UCI Household Electric Power Consumption dataset. Engineered 80+ time-series features (lag, rolling stats, EWMA, cyclical encoding). Achieved <strong style="color:var(--accent2)">99.53% forecasting accuracy</strong> with Ridge Regression across 7 trained models.</div>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">XGBoost</span>
+          <span class="project-tag">CatBoost</span>
+          <span class="project-tag">Scikit-learn</span>
+          <span class="project-tag">Time Series</span>
+        </div>
+        <a href="https://github.com/Prachii345/Energy-Consumption-Forecasting" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal" style="transition-delay:0.1s">
+        <div class="project-num">02</div>
+        <div class="project-title">Book Recommendation System</div>
+        <div class="project-desc">Personalized recommendation engine combining TF-IDF, SVD-based collaborative filtering (RMSE: 0.84 on Goodbooks-10k), and bipartite graph modeling with NetworkX. A* search algorithm optimizes recommendation paths for enhanced accuracy.</div>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">SVD</span>
+          <span class="project-tag">NetworkX</span>
+          <span class="project-tag">TF-IDF</span>
+          <span class="project-tag">Surprise</span>
+        </div>
+        <a href="https://github.com/Prachii345/Book-Recommandation-System" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="project-num">03</div>
+        <div class="project-title">Cloak of Invisibility</div>
+        <div class="project-desc">Real-time "Invisibility Cloak" effect using OpenCV and NumPy. Detects a specific color (blue) in a live webcam feed and replaces it with a pre-captured background using HSV masking and morphological operations — creating the illusion of invisibility.</div>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">OpenCV</span>
+          <span class="project-tag">NumPy</span>
+          <span class="project-tag">Computer Vision</span>
+        </div>
+        <a href="https://github.com/Prachii345/Cloak-Of-Invisibility" target="_blank" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODING PROFILES -->
+<section id="coding">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="section-label">Competitive Coding</div>
+      <h2 class="section-title">Coding Profiles</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Consistent problem solving across competitive programming platforms.</p>
+    </div>
+    <div class="coding-card reveal">
+      <div class="coding-stat">
+        <div class="coding-stat-val">600+</div>
+        <div class="coding-stat-label">Problems Solved</div>
+        <div class="lc-breakdown">
+          <span class="lc-easy">Easy 349</span>
+          <span class="lc-med">Med 238</span>
+          <span class="lc-hard">Hard 29</span>
+        </div>
+      </div>
+      <div class="coding-stat">
+        <div class="coding-stat-val">Top 35%</div>
+        <div class="coding-stat-label">LeetCode Global Rank</div>
+        <div style="margin-top:0.8rem; color: var(--muted); font-size:0.8rem;">Contest Rating 1503</div>
+      </div>
+      <div class="coding-stat">
+        <div class="coding-stat-val">200</div>
+        <div class="coding-stat-label">Day Streak Badge</div>
+        <div style="margin-top:0.8rem;"><a href="https://leetcode.com/u/Prach_1416/" target="_blank" class="project-link">View LeetCode <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect">
+  <div class="section-wrap">
+    <div class="connect-inner">
+      <div class="reveal">
+        <div class="section-label" style="display:block; text-align:center; margin-bottom:0.8rem;">Get In Touch</div>
+        <h2 class="section-title" style="text-align:center;">Let's Work Together</h2>
+        <div class="divider" style="margin: 1rem auto 1.5rem;"></div>
+        <p class="section-sub" style="text-align:center;">Whether you have a project in mind, an opportunity to share, or just want to connect — my inbox is always open.</p>
+        <a href="mailto:raghavchhabra1114@gmail.com" class="email-btn"><i class="fas fa-envelope"></i> raghavchhabra1114@gmail.com</a>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/prachi-98109a2aa/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Prachii345" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://leetcode.com/u/Prachi_1416/" target="_blank" class="social-btn"><i class="fas fa-code"></i> LeetCode</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENT DOCK -->
+<div class="achievement-dock">
+
+  <a href="https://leetcode.com/u/Prachi_1416/" target="_blank" class="dock-badge">
+    <img src="200.png">
+  </a>
+
+  <a href="https://leetcode.com/u/Prachi_1416/" target="_blank" class="dock-badge">
+    <img src="100.png">
+  </a>
+
+  <a href="https://leetcode.com/u/Prachi_1416/" target="_blank" class="dock-badge">
+    <img src="50.png">
+  </a>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
